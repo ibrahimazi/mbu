@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+$blue: #00A2E9;
+$black: #000;
+$white: #fff;
+$red: #B60007;
+$light-color: #CBD7C3;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+$border: .2rem solid $black;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+*::selection {
+    background-color: $blue;
+    color: $white;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+
+    &::-webkit-scrollbar {
+        height: .5rem;
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $blue;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: $blue;
+    cursor: pointer;
+    color: $white;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    
+
+    &:hover {
+        background-color: $black;
+    }
+}
+
+section {
+    padding: 3rem 2rem;
+    // padding: 5rem 9%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden; // agar tidak ada space di kanan
+    overflow-y: hidden;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // background-color: $white;
+    // box-shadow: $box-shadow;
+    transition: .4s;
+    z-index: 1000;
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5rem 6%; // penyesuaian padding navbar
+
+        .logo img {
+            height: 4.5rem;
+        }
+
+        .navbar a {
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            color: $white;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        #menu-btn {
+            display: none;
+            font-size: 2.5rem;
+            color: $black;
+            cursor: pointer;
+        }
+    }
+}
+
+.header.white{
+    background: $white;
+    // box-shadow: $box-shadow;
+    .navbar a{
+        color: $black;
+    }
+}
+
+
+.home-bg {
+    // background: linear-gradient(90deg, $white, transparent 10%), url(../gambar/home.jpg) no-repeat;
+    background: linear-gradient(90deg, rgba(134, 117, 84, 0.60), transparent 550%), url(../gambar/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .home {
+        min-height: 70rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .content {
+            width: 70%;
+
+            h3 {
+                font-size: 3rem;
+                color: $white;
+                line-height: 2;
+                letter-spacing: .1rem;
+                font-weight: 800;
+            }
+
+            .border-home{
+                width: 20rem;
+                height: 0.5rem;
+                background: $blue;
+                margin: auto;
+            }
+
+            p {
+                padding: 1rem 0;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $light-color;
+                line-height: 2;
+                letter-spacing: .2rem;
+            }
+        }
+    }
+}
+
+
+.tentangkami-bg {
+    background-color: $blue;
+
+    .tentangkami{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .content{
+            padding: 5rem 0 5rem 0;
+            width: 70%;
+            
+            h3{
+                font-size: 2.3rem;
+                font-weight: 800;
+                color: $white;
+                line-height: 2;
+                letter-spacing: .1rem;
+                margin-bottom: 2rem;
+            }
+
+            .border-tentangkami{
+                width: 10rem;
+                height: 0.5rem;
+                background: $red;
+                margin: auto;
+            }
+
+            p{
+                padding: 1rem 0;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $light-color;
+                line-height: 2;
+                letter-spacing: .2rem;
+            }
+
+            .btn{
+                background-color: $red;
+            }
+        }
+    }
+}
+
+
+.about {
+    padding: 10rem 0 10rem 0;
+    align-items: center;
+    min-height: 70rem;
+
+    h3{
+        text-align: center;
+        font-size: 3.2rem;
+        color: $black;
+    }
+
+    .content-1{
+        // align-items: center;
+        margin: 10rem 0 10rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        .image {
+            flex: 1 1 30rem;
+    
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 40rem;
+    
+            h3 {
+                font-size: 2rem;
+                color: $black;
+                padding-bottom: 1rem;
+                text-align: left;
+            }
+    
+            p {
+                padding: 1rem 0;
+                line-height: 2;
+                color: $black;
+                font-size: 1.5rem;
+                text-transform: none;
+            }
+        }
+    }
+
+
+    .content-2{
+        // align-items: center;
+        margin: 10rem 0 10rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        .image {
+            flex: 1 1 30rem;
+    
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 40rem;
+    
+            h3 {
+                font-size: 2rem;
+                color: $black;
+                padding-bottom: 1rem;
+                text-align: right;
+            }
+    
+            p {
+                padding: 1rem 0;
+                line-height: 2;
+                color: $black;
+                font-size: 1.5rem;
+                text-transform: none;
+                text-align: right;
+            }
+        }
+    }
+    
+}
+
+
+.portofolio-bg{
+    background-color: $red;
+
+    .portofolio{
+        padding: 10rem 0 10rem 0;
+        
+        h3 {
+            padding-bottom: 10rem;
+            text-align: center;
+            font-size: 3.4rem;
+            color: $white;
+        }
+        
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+            gap: 1.5rem;
+        
+            .box {
+                padding: 2rem;
+                background-color: $white;
+                text-align: center;
+                overflow: hidden;
+        
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .text-box{
+                    margin: 2rem 0 2rem 0;
+                    padding: 2rem 0 2rem 0;
+                    display: flex;
+                    gap: 4rem;
+                    border-bottom: .2rem solid $red;
+                    border-top: .2rem solid $red;
+
+                    .kategori{
+                        flex: 1 1 50%;
+                        
+                        p{
+                            font-size: 2rem
+                        };
+                    }
+                    .nama{
+                        flex: 1 1 50%;
+
+                        p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.kontak{
+
+    .content{
+        min-height: 50rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10rem;
+        align-items: center;
+        padding: 4rem;
+
+        .text{
+            flex: 1 1 40rem;
+
+            h3{
+                font-size: 2.8rem;
+                margin-bottom: 3rem;
+            }
+
+            p{
+                font-size: 1.5rem;
+                line-height: 2;
+                text-transform: none;
+            }
+        }
+
+        .info{
+            flex: 1 1 40rem;
+
+            .border-kontak{
+                width: 20rem;
+                height: 0.5rem;
+                background: $blue;
+                margin-bottom: 2rem;
+            }
+
+            p{
+                font-size: 1.5rem;
+                padding: 2rem 0 2rem 0;
+                text-transform: none;
+
+                i{
+                    font-size: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+    }
+}
+
+
+.footer{
+    align-items: center;
+    background-color: $blue;
+
+    p{
+        font-size: 1.7rem;
+        text-align: center;
+        padding: 4rem;
+        color: $white;
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    .header {
+
+        background-color: $white;
+
+        .flex{
+
+            .navbar {
+                position: absolute;
+                top: 99%;
+                left: 0;
+                right: 0;
+                background-color: $white;
+                border-top: $border;
+                border-bottom: $border;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: .2s linear;
+
+                a{
+                    color: $black;
+                }
+            }
+    
+            #menu-btn {
+                display: inline-block;
+                transition: .2s linear;
+            }
+    
+            #menu-btn.fa-times {
+                transform: rotate(180deg);
+            }
+    
+            .navbar a {
+                display: block;
+                margin: 2rem;
+            }
+    
+            .navbar.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+        }
+        
+    }
+
+
+    .home-bg{
+        padding: 8rem 0 6rem 0;
+
+        .home{
+
+            .content{
+
+                h3{
+                    font-size: 2.4rem;
+                    margin-bottom: 2rem;
+                }
+
+                p{
+                    margin: 2rem 0 2rem 0;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+
+    .about{
+
+        .content-1, .content-2{
+            padding: 2rem;
+
+            .content{
+                h3{
+                    text-align: left;
+                }
+            }
+            
+        }
+
+        .content-2{
+            flex-direction: column-reverse;
+            margin-bottom: -20rem;
+
+            .content{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+
+    }
+
+    .portofolio-bg{
+        padding: 2rem;
+    }
+
+}
+
+
+@media (max-width:590px) {
+
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
