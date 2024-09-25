@@ -218,7 +218,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/team/API.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/api.jpg" class="img-fluid" alt="">
                 <div class="social">
                   API Integration
                 </div>
